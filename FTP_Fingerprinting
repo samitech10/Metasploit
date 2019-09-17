@@ -1,3 +1,8 @@
+  class MetasploitModule < Msf::Auxiliary
+
+  include Msf::Exploit::Remote::Ftp
+  include Msf::Auxiliary::Scanner
+  include Msf::Auxiliary::Report
   def initialize
 
     super(
@@ -18,8 +23,7 @@ def run_host(target_host)
     connect(true, false)
     if(banner)
     print_status("#{rhost} is running #{banner}")
-    report_service(:host => rhost, :port => rport, :name=> "ftp" , :info => banner)    end
+    report_service(:host => rhost, :port => rport, :name=> "ftp", :info => banner)    end
     disconnect
     end
   end
-
