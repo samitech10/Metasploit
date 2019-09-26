@@ -6,7 +6,7 @@ class MetasploitModule < Msf::Auxiliary
     super(
       'Name'        => 'FTP Version Scanner Customized Module',
       'Description' => 'Detect FTP Version from the Target',
-      'Author'      => 'Mohd.Samiuzzaman',
+      'Author'      => 'Nipun Jaswal',
       'License'     =>  MSF_LICENSE
     )
 
